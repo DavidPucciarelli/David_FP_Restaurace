@@ -1,0 +1,54 @@
+DROP TABLE IF EXISTS final_project.Users;
+CREATE TABLE Users (
+    Id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    UserName VARCHAR(100) NOT NULL UNIQUE,
+    Password VARCHAR(500) NOT NULL,
+    FirstName VARCHAR(100) NOT NULL,
+    LastName VARCHAR(100) NOT NULL
+);
+
+DROP TABLE IF EXISTS final_project.Bookings;
+CREATE TABLE Bookings (
+  id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  userId INTEGER NOT NULL,
+  bookingDate DATETIME NOT NULL,
+  ALTER TABLE Bookings ADD FOREIGN KEY (userId) REFERENCES Users (id)
+);
+
+DROP TABLE IF EXISTS final_project.Tables;
+CREATE TABLE Tables (
+  id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  chairCount INTEGER NOT NULL,
+  occupied BOOLEAN NOT NULL
+);
+
+DROP TABLE IF EXISTS final_project.BookingsTables;
+CREATE TABLE BookingsTables (
+  bookingId INTEGER NOT NULL,
+  tableId INTEGER NOT NULL,
+  ALTER TABLE BookingsTables ADD FOREIGN KEY (bookingId) REFERENCES Bookings (id),
+  ALTER TABLE BookingsTables ADD FOREIGN KEY (tableId) REFERENCES Tables (id)
+);
+
+DROP TABLE IF EXISTS final_project.Foods;
+CREATE TABLE Foods (
+  id INTEGER NOT NULL PRIMARY KEY,
+  price DECIMAL NOT NULL,
+  INSERT INTO foods (id, price) VALUES (1, 8), (2, 8), (3, 8), (4, 9), (5, 9), (6, 9), (7, 10), (8, 10), (9, 11), (10, 12)
+);
+
+DROP TABLE IF EXISTS final_project.Orders;
+CREATE TABLE Orders (
+  id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  userId INTEGER NOT NULL,
+  dateCreated DATETIME NOT NULL,
+  orderId INTEGER NOT NULL,
+  ALTER TABLE Orders ADD FOREIGN KEY (orderId) REFERENCES Foods (id),
+  ALTER TABLE Orders ADD FOREIGN KEY (userId) REFERENCES Users (id) 
+);
+
+
+
+
+
+

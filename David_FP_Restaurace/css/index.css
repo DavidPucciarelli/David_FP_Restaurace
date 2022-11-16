@@ -1,0 +1,69 @@
+.image_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 0;
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 100vw;
+    height: auto;
+}
+
+.pizza_cover {
+    width: 100vw;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    opacity: 0.9;
+    filter: brightness(70%);
+}
+
+.text_centered {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-size: 4vw;
+    opacity: 1.2;
+}
+
+.text_top_right {
+    position: absolute;
+    top: 20%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-size: 4vw;
+    opacity: 1.2;
+}
+
+.text_top {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-size: 4vw;
+    opacity: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.text_top:hover {
+    font-size: 4.5vw;
+}
+
+#pizza_black {
+    filter: brightness(100%);
+}
+
+#dough {
+    filter: brightness(90%);
+    rotate: 180deg;
+}

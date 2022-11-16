@@ -1,0 +1,14 @@
+.pizza {
+    padding: 2px;
+    border: 3px solid var(--darkgray);
+
+}
+
+.menu {
+    margin-top: 20vh;
+    text-align: center;
+}
+
+.pizza:hover {
+    transform: scale(1.2);
+}

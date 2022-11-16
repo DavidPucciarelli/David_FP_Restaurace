@@ -1,0 +1,33 @@
+body {
+    text-align: center;
+    justify-content: center;
+    background-image: url(../images/compass.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contact_details {
+    border: 3px solid var(--darkgray);
+    width: 45vw;
+    margin-top: 10vh;
+    justify-content: center;
+    background: white;
+}
+
+@media only screen and (min-width: 699px) {
+    form {
+        width: 50vw;
+    }
+    .contact_details {
+        width: 45vw;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    form {
+        width: 85vw;
+    }
+    .contact_details {
+        width: 85vw;
+    }
+}
